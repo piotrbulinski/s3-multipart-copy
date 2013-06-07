@@ -13,4 +13,7 @@ Installation:
 
 Usage:
 
-    . venv/bin/activate; python s3cp.py src_bucket/path/filename dst_bucket/[path/filename]
+    . venv/bin/activate
+    python s3cp.py [--aws-access-key AWS_ACCESS_KEY] [--aws-secret-key AWS_SECRET_KEY] \
+        src_bucket/path/filename \
+        dst_bucket/[path/filename]
