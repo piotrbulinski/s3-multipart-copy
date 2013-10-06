@@ -65,7 +65,7 @@ if __name__ == '__main__':
         part_range_to = i * part_size + part_size - 1
         print "uploading part {part_id}/{parts} (bytes {part_range_from}-{part_range_to})".format(
             part_id=part_id, parts=total_parts, part_range_from=part_range_from, part_range_to=part_range_to)
-        mp.copy_part_from_key(src_bucket_name, dst_filename, part_id, part_range_from, part_range_to)
+        mp.copy_part_from_key(src_bucket_name, src_filename, part_id, part_range_from, part_range_to)
 
     if total_parts > full_parts:
         part_id = total_parts
@@ -73,7 +73,7 @@ if __name__ == '__main__':
         part_range_to = key.size - 1
         print "uploading part {part_id}/{parts} (bytes {part_range_from}-{part_range_to})".format(
             part_id=part_id, parts=total_parts, part_range_from=part_range_from, part_range_to=part_range_to)
-        mp.copy_part_from_key(src_bucket_name, dst_filename, part_id, part_range_from, part_range_to)
+        mp.copy_part_from_key(src_bucket_name, src_filename, part_id, part_range_from, part_range_to)
 
     print 'completeing download...'
     mp.complete_upload()
