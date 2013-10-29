@@ -75,6 +75,6 @@ if __name__ == '__main__':
             part_id=part_id, parts=total_parts, part_range_from=part_range_from, part_range_to=part_range_to)
         mp.copy_part_from_key(src_bucket_name, src_filename, part_id, part_range_from, part_range_to)
 
-    print 'completeing download...'
+    print 'completing download...'
     mp.complete_upload()
     print 'done'
